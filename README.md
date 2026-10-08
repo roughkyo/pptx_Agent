@@ -8,6 +8,7 @@ Claude Code·Codex 같은 AI 코딩 에이전트 안에서 동작하는 **PPT �
 결과물은 그림 한 장짜리 슬라이드가 아니라 **도형·텍스트를 하나하나 고칠 수 있는 네이티브 PowerPoint 파일**입니다.
 
 > 이 저장소는 [hugohe3/ppt-master](https://github.com/hugohe3/ppt-master)(MIT) → [byungjunjang/slide-master](https://github.com/byungjunjang/slide-master)를 기반으로 한 학교 업무용 커스터마이즈 버전입니다.
+
 > 원 프로젝트의 상세 설명은 [`README.slide-master.md`](README.slide-master.md)에 그대로 보존했습니다.
 
 ### 이 버전에서 바뀐 점
