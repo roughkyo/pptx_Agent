@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-pptx-master="supabase-master" data-pptx-master-name="Supabase Master" data-pptx-layout="supabase-code-data" data-pptx-layout-name="Supabase Code and Data">
+  <rect id="master-bg" data-pptx-layer="master" data-pptx-editable="false" x="0" y="0" width="1280" height="720" fill="#FFFFFF"/>
+  <circle id="master-brand-dot" data-pptx-layer="master" data-pptx-editable="false" cx="70" cy="48" r="6" fill="#3ECF8E"/>
+  <text id="master-brand" data-pptx-layer="master" data-pptx-editable="false" x="84" y="54" font-family="Pretendard, sans-serif" font-size="18" font-weight="500" fill="#171717">supabase</text>
+  <line id="code-header-rule" data-pptx-layer="layout" data-pptx-editable="false" x1="70" y1="120" x2="1210" y2="120" stroke="#DFDFDF"/>
+  <rect id="code-left-panel" data-pptx-layer="layout" data-pptx-editable="false" x="70" y="176" width="430" height="430" rx="12" fill="#FFFFFF" stroke="#DFDFDF"/>
+  <rect id="code-left-label" data-pptx-layer="layout" data-pptx-editable="false" x="94" y="202" width="92" height="28" rx="6" fill="#E9FBF3"/>
+  <circle id="code-left-status" data-pptx-layer="layout" data-pptx-editable="false" cx="112" cy="216" r="4" fill="#3ECF8E"/>
+  <rect id="code-right-panel" data-pptx-layer="layout" data-pptx-editable="false" x="536" y="176" width="674" height="430" rx="10" fill="#1C1C1C"/>
+  <rect id="code-right-toolbar" data-pptx-layer="layout" data-pptx-editable="false" x="536" y="176" width="674" height="46" rx="10" fill="#202020" stroke="#303030"/>
+  <circle id="code-right-dot-1" data-pptx-layer="layout" data-pptx-editable="false" cx="562" cy="199" r="4" fill="#707070"/>
+  <circle id="code-right-dot-2" data-pptx-layer="layout" data-pptx-editable="false" cx="576" cy="199" r="4" fill="#707070"/>
+  <circle id="code-right-dot-3" data-pptx-layer="layout" data-pptx-editable="false" cx="590" cy="199" r="4" fill="#3ECF8E"/>
+  <line id="code-right-divider" data-pptx-layer="layout" data-pptx-editable="false" x1="536" y1="430" x2="1210" y2="430" stroke="#303030"/>
+  <text id="code-table-label" data-pptx-layer="layout" data-pptx-editable="false" x="566" y="468" font-family="Consolas, monospace" font-size="12" fill="#9A9A9A">result / 3 rows</text>
+  <line id="code-table-row-1" data-pptx-layer="layout" data-pptx-editable="false" x1="566" y1="504" x2="1180" y2="504" stroke="#303030"/>
+  <line id="code-table-row-2" data-pptx-layer="layout" data-pptx-editable="false" x1="566" y1="546" x2="1180" y2="546" stroke="#303030"/>
+  <line id="code-table-row-3" data-pptx-layer="layout" data-pptx-editable="false" x1="566" y1="588" x2="1180" y2="588" stroke="#303030"/>
+  <line id="code-footer-rule" data-pptx-layer="layout" data-pptx-editable="false" x1="70" y1="660" x2="1210" y2="660" stroke="#EDEDED"/>
+  <g id="code-title-slot" data-pptx-placeholder="title" data-pptx-placeholder-bounds="70 72 980 54">
+    <text id="code-title-carrier" data-pptx-placeholder-carrier="true" x="70" y="106" font-family="Pretendard, sans-serif" font-size="32" font-weight="500" letter-spacing="-0.6" fill="#171717">{{PAGE_TITLE}}</text>
+  </g>
+  <g id="code-body-slot" data-pptx-placeholder="body" data-pptx-placeholder-idx="1" data-pptx-placeholder-bounds="94 250 382 320">
+    <text id="code-body-carrier" data-pptx-placeholder-carrier="true" x="94" y="286" font-family="Pretendard, sans-serif" font-size="18" fill="#707070">{{CONTENT_AREA}}</text>
+  </g>
+  <g id="code-sample-slot" data-pptx-placeholder="body" data-pptx-placeholder-idx="2" data-pptx-placeholder-bounds="566 250 610 150">
+    <text id="code-sample-carrier" data-pptx-placeholder-carrier="true" x="566" y="286" font-family="Consolas, Pretendard, monospace" font-size="16" fill="#FFFFFF">{{CODE_SAMPLE}}</text>
+  </g>
+  <g id="code-page-num-slot" data-pptx-placeholder="slide-number" data-pptx-placeholder-idx="3" data-pptx-placeholder-bounds="1158 662 52 28">
+    <text id="code-page-num-carrier" data-pptx-placeholder-carrier="true" x="1210" y="682" text-anchor="end" font-family="Consolas, monospace" font-size="12" fill="#707070">{{PAGE_NUM}}</text>
+  </g>
+</svg>

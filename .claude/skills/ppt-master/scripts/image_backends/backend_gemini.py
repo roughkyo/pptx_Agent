@@ -9,6 +9,8 @@ Configuration keys:
   GEMINI_API_KEY   (required)
   GEMINI_BASE_URL  (optional) Custom API endpoint for proxy services
   GEMINI_MODEL     (optional) Override default model
+  GEMINI_REVISION_MODEL (optional) Prompt-rewriting model for image_revise.py
+                   (default gemini-3.8-flash; text-only, it never draws)
 
 Dependencies:
   pip install google-genai Pillow
@@ -57,7 +59,11 @@ VALID_ASPECT_RATIOS = [
 
 VALID_IMAGE_SIZES = ["512px", "1K", "2K", "4K"]
 
-DEFAULT_MODEL = "gemini-3.1-flash-image-preview"
+# 기본 그림 모델: Nano Banana 2.1. 수정 요청은 image_revise.py가 3.8 Flash로 프롬프트를 고친 뒤 이 모델로 다시 그린다
+DEFAULT_MODEL = "gemini-nano-banana-2.1"
+
+# Nano Banana 2.1은 512px를 받지 않으므로 1K로 올린다
+MIN_IMAGE_SIZE = {"gemini-nano-banana-2.1": "1K"}
 
 
 # ╔══════���═══════════════════════════════════════════════��═══════════╗
@@ -89,7 +95,8 @@ def _generate_image(api_key: str, prompt: str,
             image_size=image_size,
         ),
     }
-    if "flash" in model.lower():
+    # MINIMAL thinking은 flash-image 계열만 받는다(3.8 Flash 등 일반 모델은 400 오류)
+    if "flash-image" in model.lower():
         config_kwargs["thinking_config"] = types.ThinkingConfig(
             thinking_level="MINIMAL",
         )
@@ -186,7 +193,7 @@ def generate(prompt: str,
         image_size: Image size ("512px", "1K", "2K", "4K", case-insensitive)
         output_dir: Output directory
         filename: Output filename (without extension)
-        model: Model name (default: gemini-3.1-flash-image-preview)
+        model: Model name (default: gemini-nano-banana-2.1)
         max_retries: Maximum number of retries
 
     Returns:
@@ -204,6 +211,8 @@ def generate(prompt: str,
         model = os.environ.get("GEMINI_MODEL") or DEFAULT_MODEL
 
     image_size = normalize_image_size(image_size)
+    if image_size == "512px" and model in MIN_IMAGE_SIZE:
+        image_size = MIN_IMAGE_SIZE[model]
 
     if aspect_ratio not in VALID_ASPECT_RATIOS:
         raise ValueError(f"Invalid aspect ratio '{aspect_ratio}'. Valid: {VALID_ASPECT_RATIOS}")

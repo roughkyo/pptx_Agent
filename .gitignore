@@ -4,9 +4,17 @@ __pycache__/
 .venv/
 venv/
 
-# Secrets / local env
+# Secrets / local env — API 키는 .env에만 두고 절대 커밋하지 않는다
 .env
 .env.*
+!.env.example
+*.pem
+*.key
+.claude/settings.local.json
+.codex/auth.json
+
+# 한글 윤문(humanize-kr) 작업 폴더 — 원고 원문이 들어 있어 로컬 전용
+_workspace/
 
 # Personal project workspace — decks and source material stay local
 projects/*

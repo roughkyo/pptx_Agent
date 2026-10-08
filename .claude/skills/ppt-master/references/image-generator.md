@@ -665,3 +665,20 @@ Diagnose the failure category, adjust the **one specific dimension** responsible
 - Placing an image without updating its `image_prompts.json` `status` and the resource list status
 - Switching rendering or palette for a single image — `hero_page` is not an exception to deck-wide coherence
 - Embedding body copy, data points, bullet lists, or long quotes inside an image — those route to SVG
+
+---
+
+## Revision Path — user dissatisfaction or change request (install-local)
+
+**Default drawing model (Gemini backend)**: `gemini-nano-banana-2.1` (Nano Banana 2.1). First-time generation always goes through `image_gen.py` with this model.
+
+**Hard rule — revisions go through the revision model.** When the user expresses dissatisfaction with an AI image or asks for it to be changed (preview annotation, chat feedback such as "그림이 별로야", "다른 그림으로 바꿔줘"), do not hand-edit the prompt and re-run. Run:
+
+```bash
+python3 ${SKILL_DIR}/scripts/image_revise.py <project>/images/image_prompts.json \
+  --file <item.png> [--file <item2.png>] --feedback "<the user's words, verbatim>"
+```
+
+- `gemini-3.8-flash` (env `GEMINI_REVISION_MODEL`) rewrites the prompt from the feedback. It is a text-only model (it returns `NO_IMAGE` when asked to draw), so it never renders.
+- The rewritten item is re-rendered by the default drawing model through the normal manifest run; the old prompt is kept in `prompt_history`.
+- Write new filenames when the old image must stay available; otherwise revising an item overwrites its file. Re-run `analyze_images.py` afterwards, as for any image change.

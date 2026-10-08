@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-pptx-master="supabase-master" data-pptx-master-name="Supabase Master" data-pptx-layout="supabase-ending" data-pptx-layout-name="Supabase Closing">
+  <rect id="master-bg" data-pptx-layer="master" data-pptx-editable="false" x="0" y="0" width="1280" height="720" fill="#FFFFFF"/>
+  <rect id="ending-night-bg" data-pptx-layer="layout" data-pptx-editable="false" x="0" y="0" width="1280" height="720" fill="#1C1C1C"/>
+  <circle id="master-brand-dot" data-pptx-layer="master" data-pptx-editable="false" cx="70" cy="48" r="6" fill="#3ECF8E"/>
+  <text id="master-brand" data-pptx-layer="master" data-pptx-editable="false" x="84" y="54" font-family="Pretendard, sans-serif" font-size="18" font-weight="500" fill="#171717">supabase</text>
+  <circle id="ending-status-dot" data-pptx-layer="layout" data-pptx-editable="false" cx="640" cy="188" r="7" fill="#3ECF8E"/>
+  <line id="ending-rule" data-pptx-layer="layout" data-pptx-editable="false" x1="456" y1="492" x2="824" y2="492" stroke="#303030"/>
+  <text id="ending-console-label" data-pptx-layer="layout" data-pptx-editable="false" x="640" y="542" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#707070">connection closed successfully</text>
+  <g id="ending-title-slot" data-pptx-placeholder="title" data-pptx-placeholder-bounds="250 228 780 112">
+    <text id="ending-title-carrier" data-pptx-placeholder-carrier="true" x="640" y="298" text-anchor="middle" font-family="Pretendard, sans-serif" font-size="52" font-weight="500" letter-spacing="-1.4" fill="#FFFFFF">{{THANK_YOU}}</text>
+  </g>
+  <g id="ending-subtitle-slot" data-pptx-placeholder="subtitle" data-pptx-placeholder-idx="1" data-pptx-placeholder-bounds="330 354 620 58">
+    <text id="ending-subtitle-carrier" data-pptx-placeholder-carrier="true" x="640" y="390" text-anchor="middle" font-family="Pretendard, sans-serif" font-size="19" fill="#B2B2B2">{{ENDING_SUBTITLE}}</text>
+  </g>
+  <g id="ending-contact-slot" data-pptx-placeholder="footer" data-pptx-placeholder-idx="2" data-pptx-placeholder-bounds="410 430 460 44">
+    <text id="ending-contact-carrier" data-pptx-placeholder-carrier="true" x="640" y="460" text-anchor="middle" font-family="Consolas, Pretendard, monospace" font-size="14" fill="#3ECF8E">{{CONTACT_INFO}}</text>
+  </g>
+</svg>

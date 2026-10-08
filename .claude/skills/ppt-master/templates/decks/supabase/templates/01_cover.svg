@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-pptx-master="supabase-master" data-pptx-master-name="Supabase Master" data-pptx-layout="supabase-cover" data-pptx-layout-name="Supabase Cover">
+  <rect id="master-bg" data-pptx-layer="master" data-pptx-editable="false" x="0" y="0" width="1280" height="720" fill="#FFFFFF"/>
+  <circle id="master-brand-dot" data-pptx-layer="master" data-pptx-editable="false" cx="70" cy="48" r="6" fill="#3ECF8E"/>
+  <text id="master-brand" data-pptx-layer="master" data-pptx-editable="false" x="84" y="54" font-family="Pretendard, sans-serif" font-size="18" font-weight="500" fill="#171717">supabase</text>
+  <line id="cover-divider" data-pptx-layer="layout" data-pptx-editable="false" x1="578" y1="104" x2="578" y2="616" stroke="#EDEDED" stroke-width="1"/>
+  <rect id="cover-ui-shadow" data-pptx-layer="layout" data-pptx-editable="false" x="664" y="178" width="500" height="332" rx="12" fill="#F3F3F3"/>
+  <rect id="cover-ui-frame" data-pptx-layer="layout" data-pptx-editable="false" x="646" y="160" width="500" height="332" rx="12" fill="#FFFFFF" stroke="#DFDFDF" stroke-width="1"/>
+  <rect id="cover-ui-toolbar" data-pptx-layer="layout" data-pptx-editable="false" x="646" y="160" width="500" height="42" rx="12" fill="#FAFAFA" stroke="#DFDFDF" stroke-width="1"/>
+  <circle id="cover-ui-dot-a" data-pptx-layer="layout" data-pptx-editable="false" cx="670" cy="181" r="4" fill="#C7C7C7"/>
+  <circle id="cover-ui-dot-b" data-pptx-layer="layout" data-pptx-editable="false" cx="684" cy="181" r="4" fill="#C7C7C7"/>
+  <circle id="cover-ui-dot-c" data-pptx-layer="layout" data-pptx-editable="false" cx="698" cy="181" r="4" fill="#3ECF8E"/>
+  <rect id="cover-ui-sidebar" data-pptx-layer="layout" data-pptx-editable="false" x="646" y="202" width="110" height="290" fill="#FAFAFA" stroke="#DFDFDF" stroke-width="1"/>
+  <rect id="cover-ui-active" data-pptx-layer="layout" data-pptx-editable="false" x="660" y="234" width="82" height="28" rx="6" fill="#E9FBF3"/>
+  <circle id="cover-ui-active-dot" data-pptx-layer="layout" data-pptx-editable="false" cx="674" cy="248" r="4" fill="#3ECF8E"/>
+  <rect id="cover-ui-table-head" data-pptx-layer="layout" data-pptx-editable="false" x="782" y="232" width="332" height="34" rx="6" fill="#FAFAFA" stroke="#EDEDED"/>
+  <line id="cover-ui-row-1" data-pptx-layer="layout" data-pptx-editable="false" x1="782" y1="304" x2="1114" y2="304" stroke="#EDEDED"/>
+  <line id="cover-ui-row-2" data-pptx-layer="layout" data-pptx-editable="false" x1="782" y1="350" x2="1114" y2="350" stroke="#EDEDED"/>
+  <line id="cover-ui-row-3" data-pptx-layer="layout" data-pptx-editable="false" x1="782" y1="396" x2="1114" y2="396" stroke="#EDEDED"/>
+  <rect id="cover-code-panel" data-pptx-layer="layout" data-pptx-editable="false" x="736" y="424" width="358" height="154" rx="8" fill="#1C1C1C"/>
+  <text id="cover-code-line-1" data-pptx-layer="layout" data-pptx-editable="false" x="758" y="456" font-family="Consolas, monospace" font-size="13" fill="#3ECF8E">select</text>
+  <text id="cover-code-line-2" data-pptx-layer="layout" data-pptx-editable="false" x="810" y="456" font-family="Consolas, monospace" font-size="13" fill="#FFFFFF">* from projects</text>
+  <text id="cover-code-line-3" data-pptx-layer="layout" data-pptx-editable="false" x="758" y="486" font-family="Consolas, monospace" font-size="13" fill="#9A9A9A">where status = 'active';</text>
+  <g id="cover-title-slot" data-pptx-placeholder="title" data-pptx-placeholder-bounds="70 178 450 170">
+    <text id="cover-title-carrier" data-pptx-placeholder-carrier="true" x="70" y="236" font-family="Pretendard, sans-serif" font-size="54" font-weight="500" letter-spacing="-1.6" fill="#171717">{{TITLE}}</text>
+  </g>
+  <g id="cover-subtitle-slot" data-pptx-placeholder="subtitle" data-pptx-placeholder-idx="1" data-pptx-placeholder-bounds="70 360 430 100">
+    <text id="cover-subtitle-carrier" data-pptx-placeholder-carrier="true" x="70" y="394" font-family="Pretendard, sans-serif" font-size="21" fill="#707070">{{SUBTITLE}}</text>
+  </g>
+  <g id="cover-date-slot" data-pptx-placeholder="date" data-pptx-placeholder-idx="2" data-pptx-placeholder-bounds="70 566 180 38">
+    <text id="cover-date-carrier" data-pptx-placeholder-carrier="true" x="70" y="592" font-family="Pretendard, sans-serif" font-size="14" fill="#707070">{{DATE}}</text>
+  </g>
+  <g id="cover-author-slot" data-pptx-placeholder="footer" data-pptx-placeholder-idx="3" data-pptx-placeholder-bounds="270 566 250 38">
+    <text id="cover-author-carrier" data-pptx-placeholder-carrier="true" x="270" y="592" font-family="Pretendard, sans-serif" font-size="14" fill="#707070">{{AUTHOR}}</text>
+  </g>
+</svg>

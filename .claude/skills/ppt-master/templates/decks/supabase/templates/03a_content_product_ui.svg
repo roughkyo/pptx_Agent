@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-pptx-master="supabase-master" data-pptx-master-name="Supabase Master" data-pptx-layout="supabase-product-ui" data-pptx-layout-name="Supabase Product UI">
+  <rect id="master-bg" data-pptx-layer="master" data-pptx-editable="false" x="0" y="0" width="1280" height="720" fill="#FFFFFF"/>
+  <circle id="master-brand-dot" data-pptx-layer="master" data-pptx-editable="false" cx="70" cy="48" r="6" fill="#3ECF8E"/>
+  <text id="master-brand" data-pptx-layer="master" data-pptx-editable="false" x="84" y="54" font-family="Pretendard, sans-serif" font-size="18" font-weight="500" fill="#171717">supabase</text>
+  <line id="product-header-rule" data-pptx-layer="layout" data-pptx-editable="false" x1="70" y1="120" x2="1210" y2="120" stroke="#DFDFDF"/>
+  <rect id="product-ui-shadow" data-pptx-layer="layout" data-pptx-editable="false" x="598" y="190" width="612" height="418" rx="12" fill="#F3F3F3"/>
+  <rect id="product-ui-frame" data-pptx-layer="layout" data-pptx-editable="false" x="582" y="174" width="612" height="418" rx="12" fill="#FFFFFF" stroke="#DFDFDF"/>
+  <rect id="product-ui-toolbar" data-pptx-layer="layout" data-pptx-editable="false" x="582" y="174" width="612" height="46" rx="12" fill="#FAFAFA" stroke="#DFDFDF"/>
+  <circle id="product-dot-1" data-pptx-layer="layout" data-pptx-editable="false" cx="608" cy="197" r="4" fill="#C7C7C7"/>
+  <circle id="product-dot-2" data-pptx-layer="layout" data-pptx-editable="false" cx="622" cy="197" r="4" fill="#C7C7C7"/>
+  <circle id="product-dot-3" data-pptx-layer="layout" data-pptx-editable="false" cx="636" cy="197" r="4" fill="#3ECF8E"/>
+  <rect id="product-sidebar" data-pptx-layer="layout" data-pptx-editable="false" x="582" y="220" width="126" height="372" fill="#FAFAFA" stroke="#DFDFDF"/>
+  <rect id="product-sidebar-active" data-pptx-layer="layout" data-pptx-editable="false" x="596" y="250" width="98" height="30" rx="6" fill="#E9FBF3"/>
+  <rect id="product-kpi-a" data-pptx-layer="layout" data-pptx-editable="false" x="736" y="250" width="196" height="96" rx="8" fill="#FFFFFF" stroke="#DFDFDF"/>
+  <rect id="product-kpi-b" data-pptx-layer="layout" data-pptx-editable="false" x="950" y="250" width="216" height="96" rx="8" fill="#FFFFFF" stroke="#DFDFDF"/>
+  <rect id="product-chart-zone" data-pptx-layer="layout" data-pptx-editable="false" x="736" y="366" width="430" height="190" rx="8" fill="#FAFAFA" stroke="#DFDFDF"/>
+  <line id="product-chart-grid-1" data-pptx-layer="layout" data-pptx-editable="false" x1="758" y1="414" x2="1142" y2="414" stroke="#EDEDED"/>
+  <line id="product-chart-grid-2" data-pptx-layer="layout" data-pptx-editable="false" x1="758" y1="462" x2="1142" y2="462" stroke="#EDEDED"/>
+  <line id="product-chart-line" data-pptx-layer="layout" data-pptx-editable="false" x1="770" y1="514" x2="842" y2="470" stroke="#24B47E" stroke-width="3"/>
+  <line id="product-chart-line-2" data-pptx-layer="layout" data-pptx-editable="false" x1="842" y1="470" x2="930" y2="486" stroke="#24B47E" stroke-width="3"/>
+  <line id="product-chart-line-3" data-pptx-layer="layout" data-pptx-editable="false" x1="930" y1="486" x2="1022" y2="430" stroke="#24B47E" stroke-width="3"/>
+  <line id="product-chart-line-4" data-pptx-layer="layout" data-pptx-editable="false" x1="1022" y1="430" x2="1128" y2="448" stroke="#24B47E" stroke-width="3"/>
+  <line id="product-footer-rule" data-pptx-layer="layout" data-pptx-editable="false" x1="70" y1="660" x2="1210" y2="660" stroke="#EDEDED"/>
+  <g id="product-title-slot" data-pptx-placeholder="title" data-pptx-placeholder-bounds="70 72 980 54">
+    <text id="product-title-carrier" data-pptx-placeholder-carrier="true" x="70" y="106" font-family="Pretendard, sans-serif" font-size="32" font-weight="500" letter-spacing="-0.6" fill="#171717">{{PAGE_TITLE}}</text>
+  </g>
+  <g id="product-key-slot" data-pptx-placeholder="subtitle" data-pptx-placeholder-idx="1" data-pptx-placeholder-bounds="70 188 440 100">
+    <text id="product-key-carrier" data-pptx-placeholder-carrier="true" x="70" y="230" font-family="Pretendard, sans-serif" font-size="30" font-weight="500" letter-spacing="-0.4" fill="#171717">{{KEY_MESSAGE}}</text>
+  </g>
+  <g id="product-body-slot" data-pptx-placeholder="body" data-pptx-placeholder-idx="2" data-pptx-placeholder-bounds="70 326 430 238">
+    <text id="product-body-carrier" data-pptx-placeholder-carrier="true" x="70" y="362" font-family="Pretendard, sans-serif" font-size="18" fill="#707070">{{CONTENT_AREA}}</text>
+  </g>
+  <g id="product-page-num-slot" data-pptx-placeholder="slide-number" data-pptx-placeholder-idx="3" data-pptx-placeholder-bounds="1158 662 52 28">
+    <text id="product-page-num-carrier" data-pptx-placeholder-carrier="true" x="1210" y="682" text-anchor="end" font-family="Consolas, monospace" font-size="12" fill="#707070">{{PAGE_NUM}}</text>
+  </g>
+</svg>

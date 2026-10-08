@@ -42,5 +42,16 @@
       "visual_style": "data-journalism",
       "delivery_purpose": "balanced"
     }
+  },
+  "supabase": {
+    "summary": "Supabase 기반 개발자 플랫폼 덱 — 흰 캔버스, 절제된 에메랄드, 편집 가능한 제품 UI 패널",
+    "canvas_format": "ppt169",
+    "page_count": 7,
+    "primary_color": "#3ECF8E",
+    "defaults": {
+      "mode": "briefing",
+      "visual_style": "swiss-minimal",
+      "delivery_purpose": "balanced"
+    }
   }
 }

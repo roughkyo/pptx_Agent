@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-pptx-master="supabase-master" data-pptx-master-name="Supabase Master" data-pptx-layout="supabase-content" data-pptx-layout-name="Supabase Content">
+  <rect id="master-bg" data-pptx-layer="master" data-pptx-editable="false" x="0" y="0" width="1280" height="720" fill="#FFFFFF"/>
+  <circle id="master-brand-dot" data-pptx-layer="master" data-pptx-editable="false" cx="70" cy="48" r="6" fill="#3ECF8E"/>
+  <text id="master-brand" data-pptx-layer="master" data-pptx-editable="false" x="84" y="54" font-family="Pretendard, sans-serif" font-size="18" font-weight="500" fill="#171717">supabase</text>
+  <line id="content-header-rule" data-pptx-layer="layout" data-pptx-editable="false" x1="70" y1="120" x2="1210" y2="120" stroke="#DFDFDF"/>
+  <rect id="content-body-frame" data-pptx-layer="layout" data-pptx-editable="false" x="70" y="188" width="1090" height="430" rx="12" fill="#FFFFFF" stroke="#DFDFDF"/>
+  <rect id="content-status-rail" data-pptx-layer="layout" data-pptx-editable="false" x="1160" y="188" width="50" height="430" rx="12" fill="#FAFAFA" stroke="#DFDFDF"/>
+  <circle id="content-status-dot" data-pptx-layer="layout" data-pptx-editable="false" cx="1185" cy="216" r="5" fill="#3ECF8E"/>
+  <line id="content-footer-rule" data-pptx-layer="layout" data-pptx-editable="false" x1="70" y1="660" x2="1210" y2="660" stroke="#EDEDED"/>
+  <g id="content-title-slot" data-pptx-placeholder="title" data-pptx-placeholder-bounds="70 72 980 54">
+    <text id="content-title-carrier" data-pptx-placeholder-carrier="true" x="70" y="106" font-family="Pretendard, sans-serif" font-size="32" font-weight="500" letter-spacing="-0.6" fill="#171717">{{PAGE_TITLE}}</text>
+  </g>
+  <g id="content-body-slot" data-pptx-placeholder="body" data-pptx-placeholder-idx="1" data-pptx-placeholder-bounds="104 224 1018 352">
+    <text id="content-body-carrier" data-pptx-placeholder-carrier="true" x="104" y="262" font-family="Pretendard, sans-serif" font-size="20" fill="#707070">{{CONTENT_AREA}}</text>
+  </g>
+  <g id="content-page-num-slot" data-pptx-placeholder="slide-number" data-pptx-placeholder-idx="2" data-pptx-placeholder-bounds="1158 662 52 28">
+    <text id="content-page-num-carrier" data-pptx-placeholder-carrier="true" x="1210" y="682" text-anchor="end" font-family="Consolas, monospace" font-size="12" fill="#707070">{{PAGE_NUM}}</text>
+  </g>
+</svg>

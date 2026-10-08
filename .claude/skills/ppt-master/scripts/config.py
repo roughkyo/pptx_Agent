@@ -330,6 +330,12 @@ DESIGN_COLORS = {
 # ============================================================
 
 INDUSTRY_COLORS = {
+    'yangphago': {
+        'name': '양파고주컬러',
+        'primary': '#4B0082',
+        'secondary': '#9200FC',
+        'accent': '#FCA532'
+    },
     'finance': {
         'name': 'Finance/Banking',
         'primary': '#003366',

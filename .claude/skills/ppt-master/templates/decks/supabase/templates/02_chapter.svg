@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-pptx-master="supabase-master" data-pptx-master-name="Supabase Master" data-pptx-layout="supabase-chapter" data-pptx-layout-name="Supabase Chapter">
+  <rect id="master-bg" data-pptx-layer="master" data-pptx-editable="false" x="0" y="0" width="1280" height="720" fill="#FFFFFF"/>
+  <circle id="master-brand-dot" data-pptx-layer="master" data-pptx-editable="false" cx="70" cy="48" r="6" fill="#3ECF8E"/>
+  <text id="master-brand" data-pptx-layer="master" data-pptx-editable="false" x="84" y="54" font-family="Pretendard, sans-serif" font-size="18" font-weight="500" fill="#171717">supabase</text>
+  <line id="chapter-rule" data-pptx-layer="layout" data-pptx-editable="false" x1="70" y1="118" x2="1210" y2="118" stroke="#DFDFDF"/>
+  <rect id="chapter-console" data-pptx-layer="layout" data-pptx-editable="false" x="70" y="510" width="1140" height="136" rx="10" fill="#1C1C1C"/>
+  <circle id="chapter-console-status" data-pptx-layer="layout" data-pptx-editable="false" cx="98" cy="544" r="5" fill="#3ECF8E"/>
+  <text id="chapter-console-label" data-pptx-layer="layout" data-pptx-editable="false" x="116" y="550" font-family="Consolas, monospace" font-size="13" fill="#9A9A9A">ready — section initialized</text>
+  <line id="chapter-console-line" data-pptx-layer="layout" data-pptx-editable="false" x1="98" y1="574" x2="1182" y2="574" stroke="#303030"/>
+  <g id="chapter-num-slot" data-pptx-placeholder="subtitle" data-pptx-placeholder-idx="1" data-pptx-placeholder-bounds="70 158 160 60">
+    <text id="chapter-num-carrier" data-pptx-placeholder-carrier="true" x="70" y="198" font-family="Pretendard, sans-serif" font-size="20" font-weight="500" fill="#24B47E">{{CHAPTER_NUM}}</text>
+  </g>
+  <g id="chapter-title-slot" data-pptx-placeholder="title" data-pptx-placeholder-bounds="70 222 1020 112">
+    <text id="chapter-title-carrier" data-pptx-placeholder-carrier="true" x="70" y="292" font-family="Pretendard, sans-serif" font-size="52" font-weight="500" letter-spacing="-1.4" fill="#171717">{{CHAPTER_TITLE}}</text>
+  </g>
+  <g id="chapter-desc-slot" data-pptx-placeholder="body" data-pptx-placeholder-idx="2" data-pptx-placeholder-bounds="72 354 760 92">
+    <text id="chapter-desc-carrier" data-pptx-placeholder-carrier="true" x="72" y="390" font-family="Pretendard, sans-serif" font-size="20" fill="#707070">{{CHAPTER_DESC}}</text>
+  </g>
+</svg>

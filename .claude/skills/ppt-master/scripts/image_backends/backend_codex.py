@@ -129,6 +129,9 @@ def _run_codex(codex_bin: str, task: str, out_dir: Path) -> subprocess.Completed
         "-s", "workspace-write",
         "--skip-git-repo-check",
     ]
+    # ChatGPT 계정에서 막힌 기본 모델을 피하려면 CODEX_IMAGE_MODEL로 실행 모델만 바꾼다
+    if os.environ.get("CODEX_IMAGE_MODEL"):
+        cmd += ["-m", os.environ["CODEX_IMAGE_MODEL"]]
     return subprocess.run(
         cmd,
         input=task,
