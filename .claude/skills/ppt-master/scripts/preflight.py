@@ -160,7 +160,7 @@ def check_codex_stubs() -> list[str]:
         return []
     sample = ", ".join(stale[:3]) + (", ..." if len(stale) > 3 else "")
     return [
-        f".codex/skills Codex stubs are stale ({len(stale)} file(s): {sample}) "
+        f"Codex/Antigravity skill stubs are stale ({len(stale)} file(s): {sample}) "
         f"— regenerate: {SYNC_CMD}"
     ]
 

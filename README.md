@@ -21,6 +21,7 @@ Claude Code·Codex 같은 AI 코딩 에이전트 안에서 동작하는 **PPT �
 | 브랜드 색 | 양파고 주컬러 프리셋(`yangphago`) 추가 |
 | 덱 템플릿 | `supabase` 덱 템플릿 추가 |
 | API 키 설정 | `.env.example` 견본 파일 제공 — 복사해서 키만 넣으면 됨 |
+| Google Antigravity 지원 | `.agents/skills/` 스킬 안내 파일 추가 — Claude Code 없이 Antigravity에서도 사용 ([1-7](#1-7-google-antigravity로-쓰기)) |
 
 ---
 
@@ -31,7 +32,7 @@ Claude Code·Codex 같은 AI 코딩 에이전트 안에서 동작하는 **PPT �
 | 준비물 | 비고 |
 |---|---|
 | Python 3.10 이상 | Windows는 설치 시 **"Add python.exe to PATH" 체크** ([Windows 설치 가이드](docs/windows-installation.md)) |
-| AI 에이전트 | [Claude Code](https://claude.ai/code) 권장. Codex CLI / ChatGPT 데스크탑 앱의 Codex도 동작 |
+| AI 에이전트 | 아래 중 하나. [Claude Code](https://claude.ai/code) 권장 · Codex CLI / ChatGPT 데스크탑 앱의 Codex · [Google Antigravity](https://antigravity.google/) (무료 요금제로도 사용 가능, [1-7](#1-7-google-antigravity로-쓰기) 참고) |
 | Git | 저장소 내려받기용 |
 | (선택) Node.js | OfficeCLI 검증 도구, Codex CLI 설치용 |
 
@@ -77,6 +78,29 @@ python .claude/skills/ppt-master/scripts/preflight.py
 ```bash
 npm install -g @officecli/officecli@1.0.135
 ```
+
+### 1-7. Google Antigravity로 쓰기
+
+Claude Code가 없어도 Google Antigravity에서 같은 스킬을 쓸 수 있습니다.
+
+1. **준비** — 위 1-2(의존성 설치), 1-3(글꼴)을 똑같이 진행합니다.
+2. **폴더 열기** — Antigravity 실행 → **Open Folder** → 내려받은 `pptx_Agent` 폴더 자체를 선택합니다.
+   폴더 맨 위의 `AGENTS.md`(작업 규칙)와 `.agents/skills/`(PPT 스킬 5종)를 Antigravity가 자동으로 읽습니다.
+3. **`.env` 키 입력** — 왼쪽 탐색기에서 `.env.example`을 복사해 이름을 `.env`로 바꾼 뒤, 파일을 열어 `GEMINI_API_KEY=` 뒤에 키를 붙여 넣고 저장합니다. (키 발급: [Google AI Studio](https://aistudio.google.com/apikey))
+   ```text
+   GEMINI_API_KEY=여기에_발급받은_키
+   ```
+4. **요청하기** — 에이전트 채팅창에 이렇게 입력합니다.
+   ```text
+   ppt-master 스킬로 projects/회의자료/원고.md 를 표지 포함 11장 회의용 PPT로 만들어줘. 문구는 개조식으로.
+   ```
+   스킬을 못 찾는 것 같으면 요청 앞에 이 문장을 붙이세요.
+   ```text
+   .agents/skills/ppt-master/SKILL.md 를 읽고 그 절차대로 진행해줘.
+   ```
+
+- 에이전트가 **터미널 명령 실행 허락**을 물으면 허용해야 진행됩니다. 슬라이드 검사·PPTX 내보내기를 Python으로 실행하기 때문입니다.
+- 스킬 중 `codex-image`는 Codex CLI 로그인이 있어야 동작합니다. 없으면 `.env`의 Gemini 키로 그림을 만듭니다.
 
 ---
 
@@ -160,6 +184,7 @@ python .claude/skills/ppt-master/scripts/image_revise.py projects/<프로젝트>
 | 증상 | 해결 |
 |---|---|
 | 미리보기 주소(`127.0.0.1:5050`)가 안 열림 | 채팅에 "미리보기 다시 열어줘" |
+| Antigravity가 PPT 스킬을 못 찾음 | `pptx_Agent` 폴더 자체를 열었는지 확인(상위 폴더 X). 요청 앞에 "`.agents/skills/ppt-master/SKILL.md` 를 읽고 진행해줘" 추가 |
 | 그림 생성 단계에서 키 오류 | `.env` 파일 이름(`.env.txt`가 아닌지)과 키 앞뒤 공백 확인 |
 | 그림 생성 단계에서 모델 이름 오류 | `.env`에 `GEMINI_MODEL=` 줄을 추가해 계정에서 쓸 수 있는 그림 모델 이름 입력 |
 | 설치 확인(1-5)에서 오류 | 오류 메시지를 그대로 AI 에이전트에게 붙여 넣고 해결 요청 |
@@ -171,7 +196,8 @@ python .claude/skills/ppt-master/scripts/image_revise.py projects/<프로젝트>
 
 | 경로 | 내용 |
 |---|---|
-| [`CLAUDE.md`](CLAUDE.md) / [`AGENTS.md`](AGENTS.md) | AI 에이전트 진입점 (Claude Code / Codex) |
+| [`CLAUDE.md`](CLAUDE.md) / [`AGENTS.md`](AGENTS.md) | AI 에이전트 진입점 (Claude Code / Codex·Antigravity) |
+| `.codex/skills/`, `.agents/skills/` | Codex·Antigravity용 스킬 안내 파일 (자동 생성, 직접 고치지 않음) |
 | [`.claude/skills/ppt-master/`](.claude/skills/ppt-master/) | 워크플로우 본체 — `SKILL.md`, `references/`, `scripts/`, `workflows/`, `templates/` |
 | `projects/` | 내 작업 공간 — 원고·결과물 (내 PC에만 저장) |
 | [`docs/`](docs/) | 사용자 문서 |
