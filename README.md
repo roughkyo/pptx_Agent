@@ -42,6 +42,7 @@ Claude Code·Codex 같은 AI 코딩 에이전트 안에서 동작하는 **PPT �
 git clone https://github.com/roughkyo/pptx_Agent.git
 cd pptx_Agent
 pip install -r requirements.txt
+pip install playwright
 python -m playwright install chromium
 ```
 
