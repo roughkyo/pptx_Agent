@@ -1,4 +1,4 @@
-# pptx_Agent — 원고를 넣으면 PowerPoint에서 편집되는 PPTX를 만드는 AI 에이전트
+# pptx_Agent - 원고를 넣으면 PowerPoint에서 편집되는 PPTX를 만드는 AI 에이전트
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Font](https://img.shields.io/badge/font-Pretendard-0b1f3a)](.claude/skills/ppt-master/assets/fonts/Pretendard/)
