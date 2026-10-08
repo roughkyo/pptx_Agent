@@ -8,7 +8,6 @@ Claude Code·Codex 같은 AI 코딩 에이전트 안에서 동작하는 **PPT �
 결과물은 그림 한 장짜리 슬라이드가 아니라 **도형·텍스트를 하나하나 고칠 수 있는 네이티브 PowerPoint 파일**입니다.
 
 > 이 저장소는 [hugohe3/ppt-master](https://github.com/hugohe3/ppt-master)(MIT) → [byungjunjang/slide-master](https://github.com/byungjunjang/slide-master)를 기반으로 한 학교 업무용 커스터마이즈 버전입니다.
-
 > 원 프로젝트의 상세 설명은 [`README.slide-master.md`](README.slide-master.md)에 그대로 보존했습니다.
 
 ### 이 버전에서 바뀐 점
@@ -20,7 +19,7 @@ Claude Code·Codex 같은 AI 코딩 에이전트 안에서 동작하는 **PPT �
 | Codex 이미지 백엔드 | `CODEX_IMAGE_MODEL` 환경변수로 실행 모델 지정 가능 |
 | 브랜드 색 | 양파고 주컬러 프리셋(`yangphago`) 추가 |
 | 덱 템플릿 | `supabase` 덱 템플릿 추가 |
-| 보안 | `.env.example` 제공, `.gitignore`에 키·작업 폴더 차단 규칙 보강 |
+| API 키 설정 | `.env.example` 견본 파일 제공 — 복사해서 키만 넣으면 됨 |
 
 ---
 
@@ -61,8 +60,8 @@ cp .env.example .env
 
 (Windows PowerShell: `Copy-Item .env.example .env`)
 
-`.env`를 열어 `GEMINI_API_KEY=` 뒤에 [Google AI Studio](https://aistudio.google.com/apikey)에서 발급한 키를 **직접** 붙여 넣습니다.
-`.env`는 `.gitignore` 대상이라 커밋되지 않습니다. API 키 없이 Codex CLI 로그인 방식으로 이미지를 만드는 방법은 [`README.slide-master.md`](README.slide-master.md)를 참고하세요.
+`.env`를 열어 `GEMINI_API_KEY=` 뒤에 [Google AI Studio](https://aistudio.google.com/apikey)에서 발급한 키를 **직접** 붙여 넣고 저장합니다.
+`.env`는 내 PC에만 남는 파일입니다. API 키 없이 Codex CLI 로그인 방식으로 이미지를 만드는 방법은 [`README.slide-master.md`](README.slide-master.md)를 참고하세요.
 
 ### 1-5. 설치 확인
 
@@ -131,34 +130,39 @@ python .claude/skills/ppt-master/scripts/image_revise.py projects/<프로젝트>
 
 ## 3. 유의점
 
-### 3-1. API 키·개인정보 보호
+### 3-1. 처음 쓰기 전에 꼭 할 일
 
-- **API 키는 `.env`에만** 넣습니다. `.env.example`·README·코드·이슈·채팅에 실제 키를 쓰지 마세요.
-- 커밋 전에 한 번 확인하세요.
+1. **`.env` 파일 만들기** — 폴더 안의 `.env.example`을 복사해 이름을 `.env`로 바꿉니다. ([1-4](#1-4-ai-이미지-생성-설정-선택) 참고)
+2. **Gemini API 키 입력하기** — `.env`를 메모장으로 열어 `GEMINI_API_KEY=` 바로 뒤에 [Google AI Studio](https://aistudio.google.com/apikey)에서 발급한 키를 붙여 넣고 저장합니다. 띄어쓰기·따옴표 없이 붙여 넣으세요.
+   ```text
+   GEMINI_API_KEY=여기에_발급받은_키
+   ```
+   키가 없으면 AI 그림은 만들 수 없고, 도형·아이콘만으로 된 슬라이드로 진행됩니다.
+3. **Pretendard 글꼴 설치하기** — 작업하는 PC와 **발표할 PC 모두** 설치해야 합니다. ([1-3](#1-3-글꼴-pretendard) 참고)
 
-```bash
-git check-ignore -v .env
-```
+### 3-2. API 키 관리
 
-규칙(`.gitignore:8:.env`)이 출력되면 정상입니다. `git status`에 `.env`가 보이면 커밋하지 마세요.
+- 키 입력은 **직접** 하세요. AI 에이전트는 보안상 키를 대신 입력하지 않습니다.
+- 키를 채팅창, 메신저, 다른 문서에 붙여 넣지 마세요. `.env` 한 곳에만 둡니다.
+- 키가 남에게 노출된 것 같으면 Google AI Studio에서 **그 키를 삭제하고 새로 발급**한 뒤 `.env`의 값만 바꾸면 됩니다.
+- 그림을 만들 때마다 사용료가 본인 계정에 청구될 수 있습니다. 사용량은 Google AI Studio에서 확인하세요.
 
-- 키가 한 번이라도 커밋·푸시되었다면 **즉시 Google AI Studio에서 키를 폐기하고 새로 발급**하세요. 커밋을 지워도 기록에 남을 수 있습니다.
-- `projects/`(원고·결과물)와 `_workspace/`(윤문 작업본)는 `.gitignore`로 로컬에만 남습니다. 학생 개인정보가 담긴 자료는 커밋하지 마세요.
+### 3-3. 결과물 확인
 
-### 3-2. 결과물 관련
+- 발표할 PC에 Pretendard가 없으면 글꼴이 바뀌어 줄바꿈·위치가 어긋납니다. 설치가 어려우면 PowerPoint에서 **PDF로 저장**해 가져가세요.
+- AI 그림은 만들 때마다 결과가 달라집니다. 쓰기 전에 엉뚱한 글자·로고·인물이 들어가지 않았는지 직접 확인하세요.
+- 수정할 때마다 `_ver2`, `_ver3`… 파일이 새로 생깁니다. **번호가 가장 큰 파일이 최신본**입니다.
+- 원고 내용은 AI 서비스로 전송됩니다. **학생 실명·연락처 등 개인정보는 지우고** 넣으세요.
 
-- **Pretendard 미설치 PC**에서는 글꼴이 바뀌어 줄바꿈·위치가 달라질 수 있습니다.
-- AI 이미지는 생성할 때마다 결과가 달라집니다. 최종 사용 전 상표·인물·문자가 들어가지 않았는지 직접 확인하세요.
-- LibreOffice로 만든 확인용 미리보기에는 날짜·쪽번호 칸이 보일 수 있으나 PowerPoint에서는 나타나지 않습니다.
-- Gemini API 사용료는 사용량에 따라 본인 계정에 청구됩니다.
+### 3-4. 문제가 생겼을 때
 
-### 3-3. 환경 관련
-
-- `.venv/`는 PC마다 새로 만들어야 합니다(복사해서 쓰지 않음).
-- 라이브 프리뷰 포트 `5050`이 사용 중이면 다른 포트를 씁니다. 실제 주소는 AI가 알려 줍니다.
-- Windows에서 한글이 깨지면 `PYTHONIOENCODING=utf-8`(PowerShell: `$env:PYTHONIOENCODING='utf-8'`)을 지정하세요.
-- 모델 이름(`gemini-nano-banana-2.1`, `gemini-3.8-flash`)이 계정에서 지원되지 않으면 `.env`의 `GEMINI_MODEL` / `GEMINI_REVISION_MODEL`로 바꿀 수 있습니다. `gemini-3.8-flash`는 글 전용 모델이라 그림을 직접 그리지 못합니다.
-- 원 프로젝트(upstream) 업데이트는 단순 `git pull`로 합쳐지지 않을 수 있습니다. 이 버전의 변경점(위 표)을 확인하며 병합하세요.
+| 증상 | 해결 |
+|---|---|
+| 미리보기 주소(`127.0.0.1:5050`)가 안 열림 | 채팅에 "미리보기 다시 열어줘" |
+| 그림 생성 단계에서 키 오류 | `.env` 파일 이름(`.env.txt`가 아닌지)과 키 앞뒤 공백 확인 |
+| 그림 생성 단계에서 모델 이름 오류 | `.env`에 `GEMINI_MODEL=` 줄을 추가해 계정에서 쓸 수 있는 그림 모델 이름 입력 |
+| 설치 확인(1-5)에서 오류 | 오류 메시지를 그대로 AI 에이전트에게 붙여 넣고 해결 요청 |
+| 명령 창에서 한글이 깨짐 | PowerShell에서 `$env:PYTHONIOENCODING='utf-8'` 실행 후 다시 시도 |
 
 ---
 
@@ -168,7 +172,7 @@ git check-ignore -v .env
 |---|---|
 | [`CLAUDE.md`](CLAUDE.md) / [`AGENTS.md`](AGENTS.md) | AI 에이전트 진입점 (Claude Code / Codex) |
 | [`.claude/skills/ppt-master/`](.claude/skills/ppt-master/) | 워크플로우 본체 — `SKILL.md`, `references/`, `scripts/`, `workflows/`, `templates/` |
-| `projects/` | 내 작업 공간 (커밋되지 않음) |
+| `projects/` | 내 작업 공간 — 원고·결과물 (내 PC에만 저장) |
 | [`docs/`](docs/) | 사용자 문서 |
 | [`.env.example`](.env.example) | API 키 설정 견본 |
 
